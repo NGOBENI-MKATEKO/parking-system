@@ -3,11 +3,11 @@ import 'firebase/compat/firestore';
 import firebase from 'firebase/compat/app'
 
 @Component({
-  selector: 'app-add-user',
-  templateUrl: './add-user.component.html',
-  styleUrls: ['./add-user.component.scss']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class AddUserComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
   name = ''; 
   surname= '';
@@ -28,7 +28,7 @@ export class AddUserComponent implements OnInit {
         
     }
 
-    async addCostumers() { 
+    async updateBalance() { 
         await firebase.firestore().collection('costumer').add({
           name: this.name,
           surname : this.surname,
@@ -39,6 +39,5 @@ export class AddUserComponent implements OnInit {
 
         });
 
-    }
-
+}
 }
