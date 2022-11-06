@@ -25,7 +25,7 @@ pinMode(IR2, INPUT);
   
 myservo1.attach(3);
 myservo1.write(100);
-
+                                                                                                                      
 lcd.setCursor (0,0);
 lcd.print("     ARDUINO    ");
 lcd.setCursor (0,1);
