@@ -38,7 +38,7 @@ export class AddUserComponent implements OnInit {
           dateIn : new Date()
 
         });
-
+        location.reload();
     }
 
 }

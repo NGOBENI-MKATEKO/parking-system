@@ -29,15 +29,13 @@ export class AdminComponent implements OnInit {
     }
 
     async updateBalance() { 
-        await firebase.firestore().collection('costumer').add({
-          name: this.name,
-          surname : this.surname,
-          status: this.status,
-          balance: this.balance,
-          identifier : this.identifier,
-          dateIn : new Date()
+        var user_id  ;
+        await firebase.firestore().collection('costumer').where("identifier", '==', this.identifier)
+        .get()
+        .then((value) => user_id= value.docs[0].id);
 
-        });
+        if(user_id != null){ await firebase.firestore().collection('costumer').doc(user_id).update({balance: firebase.firestore.FieldValue.increment(this.balance)}); }
 
-}
+        location.reload();
+    }
 }

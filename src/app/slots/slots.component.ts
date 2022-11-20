@@ -21,18 +21,13 @@ export class SlotsComponent implements OnInit {
       appId: "1:914736979963:web:d19db58e6f2f3fc92af55e"
     };
       firebase.initializeApp(firebaseConfig); 
-      //this.getCostumers(); 
       this.getSlots();
     }
-   
-    // async getCostumers() { 
-    //   const snapshot = await firebase.firestore().collection('costumer').get();
-    //   snapshot.forEach((doc) => this.costumers.push(doc.data()));
-    // }
 
     async getSlots() { 
       const snapshot = await firebase.firestore().collection('slot').get();
       snapshot.forEach((doc) => this.slots.push(doc.data()));
+     
   }
 
 }
