@@ -19,8 +19,8 @@
 
 #include "camera_pins.h"
 
-const char* ssid = "ZTE_AB605A_2.4G";
-const char* password = "28892131";
+const char* ssid = "Candy";
+const char* password = "odqk6967";
 
 void startCameraServer();
 

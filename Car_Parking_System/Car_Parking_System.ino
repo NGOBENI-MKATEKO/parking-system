@@ -11,7 +11,7 @@ Servo myservo1;
 int IR1 = 2;
 int IR2 = 4;
 
-int Slot = 4;           //Enter Total number of parking Slots
+int Slot = 3;           //Enter Total number of parking Slots
 
 int flag1 = 0;
 int flag2 = 0;
@@ -33,6 +33,7 @@ lcd.print(" PARKING SYSTEM ");
 delay (2000);
 lcd.clear();  
 }
+
 
 void loop(){ 
 
